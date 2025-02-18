@@ -26,6 +26,7 @@
   },
   "javascript": {
     "formatter": {
+      "arrowParentheses": "asNeeded",
       "quoteStyle": "double",
       "semicolons": "always",
       "trailingCommas": "es5"
