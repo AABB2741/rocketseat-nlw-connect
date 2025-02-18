@@ -1,84 +1,49 @@
-# Turborepo starter
+# NLW Connect
 
-This Turborepo starter is maintained by the Turborepo core team.
+O NLW Connect é um evento de programação organizado pela [Rocketseat](https://www.rocketseat.com.br).
 
-## Using this example
+Este repositório é um monorepo criado com [Turborepo](https://turbo.build/repo/docs) e contém o projeto desenvolvido nas trilhas de React e Node.js. Você pode encontrar os projetos [clonando este repositório](#clonando-este-repositório) e acessando a pasta `apps`.
 
-Run the following command:
+## Clonando este repositório
 
-```sh
-npx create-turbo@latest
+Para clonar este repositório, siga as etapas a seguir:
+
+### 1. Clone o projeto do GitHub
+
+Usando GitHub CLI:
+```bash
+gh repo clone AABB2741/rocketseat-nlw-connect
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+Usando SSH:
+```bash
+git@github.com:AABB2741/rocketseat-nlw-connect.git
 ```
 
-### Develop
+### 2. Instalação das dependências
 
-To develop all apps and packages, run the following command:
+Abra o projeto clonado em um terminal ou editor de código, e execute o comando de instalação:
 
+```bash
+pnpm install
 ```
-cd my-turborepo
+
+### 3. Configuração das variáveis de ambiente
+
+Para que o projeto funcione, você precisa antes configurar as variáveis de ambiente. Em cada um dos projetos, há um arquivo `.env.example` que você pode copiar e colar no mesmo lugar e renomeá-los para `.env`.
+
+`/apps/web/.env.example` → `/apps/web/.env`
+
+### 4. Executando o projeto
+
+Você pode executar os projetos rodando no terminal:
+
+```bash
 pnpm dev
 ```
 
-### Remote Caching
+E abrindo no seu navegador: http://localhost:3000 🚀
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+---
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+Feito com ❤️ por Mário.
