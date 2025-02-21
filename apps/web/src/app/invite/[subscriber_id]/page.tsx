@@ -6,8 +6,16 @@ import { InviteLinkInput } from "./_components/invite-link-input";
 import { Ranking } from "./_components/ranking";
 import { Stats } from "./_components/stats";
 
-export default function InvitePage() {
-  const inviteLink = "https://localhost:3000/invite/123";
+interface InvitePageProps {
+  params: Promise<{
+    subscriber_id: string;
+  }>;
+}
+
+export default async function InvitePage({ params }: InvitePageProps) {
+  const subscriberId = (await params).subscriber_id;
+
+  const inviteLink = `http://localhost:3333/invites/${subscriberId}`;
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
@@ -36,7 +44,7 @@ export default function InvitePage() {
           </div>
 
           <InviteLinkInput inviteLink={inviteLink} />
-          <Stats />
+          <Stats subscriberId={subscriberId} />
         </div>
       </div>
 
